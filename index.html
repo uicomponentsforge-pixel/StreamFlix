@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamFlix</title>
+  <meta name="description" content="StreamFlix: a small streaming site with search, favorites, a video player and dark/light mode.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#/" aria-label="StreamFlix home">Stream<b>Flix</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/search" data-nav="search">Browse</a>
+      <a href="#/favorites" data-nav="favorites">My List <span id="favCount" class="count">0</span></a>
+    </nav>
+    <div class="tools">
+      <label class="searchbox">
+        <span class="sr">Search titles</span>
+        <input id="q" type="search" placeholder="Search titles, genres, years  ( / )" autocomplete="off">
+      </label>
+      <button id="themeBtn" class="icon-btn" aria-label="Switch theme" title="Switch theme">🌙</button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    <p>StreamFlix is a learning project. All 14 films are public-domain features streamed from the Internet Archive. Ratings are approximate.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
